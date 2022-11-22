@@ -155,12 +155,24 @@ public class Customer {
                 case 3:
                     System.out.println("view all transactions");
 
+                    for(Customer c4:cust)
+                    {
+
+                        System.out.println(c4.name);
+                        System.out.println(c4.mobileNo);
+
+                        System.out.println(c4.bill_amt);
+
+                        System.out.println("\n");
+
+                    }
+
                     break;
 
                 case 4:
 
                     System.out.println("Exit");
-
+                    exit=1;
                     break;
 
                 default:
@@ -170,10 +182,11 @@ public class Customer {
 
             }
 
-            System.out.println("Enter 1 to exit\n0 to continue");
+            if(exit!=1) {
+                System.out.println("Enter 1 to exit\n0 to continue");
 
-            exit=sc.nextInt();
-
+                exit = sc.nextInt();
+            }
 
         }
 
